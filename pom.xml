@@ -14,7 +14,7 @@
 	<name>loginRegister</name>
 	<description>cv project backend</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -68,20 +68,27 @@
 	</dependencies>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
-		</plugins>
+	  <plugins>
+	   <plugin>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-maven-plugin</artifactId>
+	<configuration>
+		<excludes>
+			<exclude>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+			</exclude>
+		</excludes>
+	</configuration>
+	   </plugin>
+		  <plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-compiler-plugin</artifactId>
+			  <configuration>
+				  <source>13</source>
+				  <target>13</target>
+			  </configuration>
+		  </plugin>
+	  </plugins>
 	</build>
-
 </project>
